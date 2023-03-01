@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.2/dist/full.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="md:mx-28 md:my-6">
+<body class="md:mx-28 md:my-6" onload="newsLoad()">
     <!-- Navbar starts here -->
 
     <nav >
@@ -63,12 +63,42 @@
     </nav>
     <!-- Navabar ends here -->
     <main>
-        <section>
-            <div id="news-count-message" >
-                <!-- Dynamic message about news in a category -->
+        <section >
+            <div class="h-16">
+              <div id="news-count-message" >
+                
+                <!-- Dynamic message about news items in a category -->
 
             </div>
+            </div>
+            <div class="lg:mt-20 lg:flex justify-between">
+                <div class="">
+                    <!-- Sort by goes here -->
+                    <form action="/action_page.php">
+                        <label for="cars">Select by <span></span>:</label>
+                        <select class="p-2" name="cars" id="cars">
+                          <option value="volvo">View</option>
+                          <option value="saab">Date</option>
+                          <option value="opel">Author</option>
+                          <option value="audi">Audi</option>
+                        </select>
+                        <br><br>
+                      </form>
+                </div>
+                <div>
+                    <button class="px-4 py-3 rounded-md font-bold hover:bg-gray-300">Today's Pick</button>
+                    <button class="px-4 py-3 rounded-md font-bold hover:bg-gray-300">Trending</button>
+                    <!-- today's pick and trending button here -->
+                </div>
+            </div>
         </section>
+        <section>
+          <div id="news-section" class="lg:mt-8 ">
+            <!-- All news goes here -->
+            
+          </div>
+        </section>
+        
     </main>
 
 
