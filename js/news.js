@@ -67,12 +67,12 @@ const allNews = (data) => {
                         <p>${name? name : "Source not found"}</p>
                     </div>
                     </div>
-                    <div><p>${published_date}</div>
+                    <div><p>${new Date}</div>
                 </div>
                 <p>${details.slice(0, 300)}</p>
 
                 <div class="">
-                  <button class="px-4 py-3 rounded-md font-bold hover:bg-gray-300">More</button>
+                <label for="my-modal-5" class="px-4 py-3 rounded-md font-bold hover:bg-gray-300">More</label>
                 </div>
               </div>
             </div>
@@ -80,3 +80,5 @@ const allNews = (data) => {
     })
 }
 newsCategories()
+
+// px-4 py-3 rounded-md font-bold hover:bg-gray-300
